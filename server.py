@@ -51,11 +51,14 @@ def movie_award():
 @app.route('/do_movie_award', methods=['POST'])
 def do_movie_award():
   year = request.form['year']
-  
+  if len(year) == 0 :
+    a = []
+    context = dict(data = a)
+    return render_template("award_year.html", **context)
   command = "select * from oscar_award where year = "+year
   cursor = g.conn.execute(command)
   a = []
-  m = True
+  m = True 
   a.append(year)
   for index in cursor : 
     if m : 
