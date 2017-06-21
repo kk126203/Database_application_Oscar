@@ -1,0 +1,47 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  <script type = "text/javascript">
+    function country_input(id){
+       document.getElementById("id_result").value=id;}
+    
+  </script>
+
+  <body background = 'https://previews.123rf.com/images/sdmix/sdmix0901/sdmix0901
+00059/4225091-vector-oscar-statuette-background-eps8-Stock-Vector-hollywood-award
+s-movie.jpg'>
+      <h1>Let's see how many Oscar awards a country get from its releasing movie</h1>
+
+      <form method="POST" action="/do_country_award">
+
+          Select a Country:<br>
+          <input type="button" value="Canada"  onclick="country_input(this.value)">
+          <input type="button" value="America "  onclick="country_input(this.value)">
+          <input type="button" value="China"  onclick="country_input(this.value)">
+          <input type="button" value="Japan"  onclick="country_input(this.value)">
+          <input type="button" value="Germany"  onclick="country_input(this.value)">
+          <input type="button" value="United Kingdom"  onclick="country_input(this.value)">
+          <input type="button" value="France"  onclick="country_input(this.value)">
+          <input type="button" value="India"  onclick="country_input(this.value)">
+          <input type="button" value="Brazil"  onclick="country_input(this.value)">
+          <input type="button" value="Taiwan"  onclick="country_input(this.value)">
+          <input type="button" value="Italy"  onclick="country_input(this.value)"><br>
+          <input type="text"  name = "country" id="id_result"> <br><br>
+
+          <input type="submit" value="Enter" style="width:100px; height:50px;">
+
+    </form>
+
+         </div>
+            {% for n in data %}
+               Earned {{n[1]}} awards from the movie it released in {{n[0]}}   <br/>
+             
+            {%endfor%}
+         </div>
+
+
+    <p><a href="/">Back to home page</a></p>
+  </body>
+</html>
+

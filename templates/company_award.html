@@ -1,0 +1,41 @@
+<html>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  <script type = "text/javascript">
+    function input(name){
+       document.getElementById("result").value=name;}
+  </script>
+
+  <body background = 'https://previews.123rf.com/images/sdmix/sdmix0901/sdmix0901
+00059/4225091-vector-oscar-statuette-background-eps8-Stock-Vector-hollywood-award
+s-movie.jpg'>
+      <h1>Comany's total Oscar Awards from the movies released in these ten years</h1>
+
+
+      <form method="POST" action="/do_company_award">
+          Please choose a company:<br>
+          <input type="button" value="Warner Bros"  onclick="input(this.value)">
+          <input type="button" value="Walt Disney Studios "  onclick="input(this.value)">
+          <input type="button" value="Fox Entertainment Group"  onclick="input(this.value)">
+          <input type="button" value="Universal Pictures"  onclick="input(this.value)">
+          <input type="button" value="Sony Pictures"  onclick="input(this.value)">
+          <input type="button" value="Paramount Pictures"  onclick="input(this.value)">
+          <input type="button" value="New Line Cinema"  onclick="input(this.value)">
+          <input type="button" value="Columbia"  onclick="input(this.value)">
+          <input type="button" value="MGM"  onclick="input(this.value)">
+          <input type="button" value="TriStar"  onclick="input(this.value)"> <br><br>
+          <input type="text"  name = "company" id="result"> <br><br>
+          <input type="submit" value="Enter" style="width:100px; height:50px;">
+    </form>
+
+         </div>
+            {% for n in data %}
+               <div>Awayd type : {{n[0]}},  year : {{n[1]}}</div>
+            {%endfor%}
+         </div>
+
+    <p><a href="/">Back to home page</a></p>
+  </body>
+</html>

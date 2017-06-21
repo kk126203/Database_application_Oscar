@@ -1,0 +1,41 @@
+<html>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  <script type = "text/javascript">
+    function input(name){
+       document.getElementById("result").value=name;}
+  </script>
+
+  <body background = 'https://previews.123rf.com/images/sdmix/sdmix0901/sdmix0901
+00059/4225091-vector-oscar-statuette-background-eps8-Stock-Vector-hollywood-award
+s-movie.jpg'>
+      <h1>Let's see in which countries the actor's Oscar movie has been shown</h1>
+
+
+      <form method="POST" action="/do_actor_country">
+          Please choose an actor:<br>
+          <input type="button" value="Ben Affleck"  onclick="input(this.value)">
+          <input type="button" value="Jean Dujardin"  onclick="input(this.value)">
+          <input type="button" value="Dev Patel"  onclick="input(this.value)">
+          <input type="button" value="Colin Firth"  onclick="input(this.value)">
+          <input type="button" value="Jeremy Renner"  onclick="input(this.value)">
+          <input type="button" value="Tommy Lee Jones"  onclick="input(this.value)">
+          <input type="button" value="Leonardo DiCaprio"  onclick="input(this.value)">
+          <input type="button" value="Karina Arroyave"  onclick="input(this.value)">
+          <input type="button" value="Hilary Swank"  onclick="input(this.value)">
+          <input type="button" value="Elijah Wood"  onclick="input(this.value)"> <br><br>
+          <input type="text"  name = "actor" id="result"> <br><br>
+          <input type="submit" value="Enter" style="width:100px; height:50px;">
+    </form>
+
+         </div>
+            {% for n in data %}
+               <div>Showing countries : {{n[0]}},  Movie name : {{n[1]}}</div>
+            {%endfor%}
+         </div>
+
+    <p><a href="/">Back to home page</a></p>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  <script type = "text/javascript">
+    function input(name){
+       document.getElementById("result").value=name;}
+  </script>
+
+  <body background = 'https://previews.123rf.com/images/sdmix/sdmix0901/sdmix0901
+00059/4225091-vector-oscar-statuette-background-eps8-Stock-Vector-hollywood-award
+s-movie.jpg'>
+      <h1>The Oscar movie of the year and the awards it won</h1>
+
+
+    <form method="POST" action="/do_movie_award">
+          Please choose a year:<br>
+          <input type="button" value="2003"  onclick="input(this.value)"> 
+	  <input type="button" value="2004"  onclick="input(this.value)">
+	  <input type="button" value="2005"  onclick="input(this.value)">
+	  <input type="button" value="2006"  onclick="input(this.value)">
+	  <input type="button" value="2007"  onclick="input(this.value)">
+	  <input type="button" value="2008"  onclick="input(this.value)">
+	  <input type="button" value="2009"  onclick="input(this.value)">          
+	  <input type="button" value="2010"  onclick="input(this.value)">
+	  <input type="button" value="2011"  onclick="input(this.value)">
+	  <input type="button" value="2012"  onclick="input(this.value)"> <br><br>
+          <input type="text"  name = "year" id="result"> <br><br>
+	  <input type="submit" value="Enter" style="width:100px; height:50px;">
+    </form>
+
+         </div>
+            {% for n in data %} 
+	       <div>{{n}}</div>
+	    {%endfor%}
+         </div>	
+
+         <div>
+            {% if data[0]=="2003" %}
+               <p>
+                   <img src="http://www.americanpridemagazine.com/wp-content/uploads/2015/05/Lordof-the-rigns-return-of-the-king.png"  style="width:400px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=r5X-hFf6Bwo">Trailor for this movie</a>
+            {%endif%}
+         </div>
+         
+         <div>
+            {% if data[0]=="2004" %}
+               <p>
+                   <img src="https://lettherebemovies.files.wordpress.com/2014/09/million-dollar-baby-cover-2004-636-380.jpg"  style="width:400px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=5_RsHRmIRBY">Trailor for this movie</a>
+            {%endif%}
+         </div>
+          
+         <div>
+            {% if data[0]=="2005" %}
+               <p>
+                   <img src="https://i.ytimg.com/vi/8rQE_y0V-ss/hqdefault.jpg"  style="width:360px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=durNwe9pL0E">Trailor for this movie</a>
+            {%endif%}
+         </div>
+        
+         <div>
+            {% if data[0]=="2006" %}
+               <p>
+                   <img src="http://the-indie-pendent.com/wp-content/uploads/2015/06/The-Departed-Movie-HD-2006.jpg"  style="width:400px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=iojhqm0JTW4">Trailor for this movie</a>
+            {%endif%}
+         </div>
+ 
+         <div>
+            {% if data[0]=="2007" %}
+               <p>
+                   <img src="https://pmd205465tn-a.akamaihd.net/Miramax/262/3/54MTduYTphS-9lCi_2FlI6ppcS2Ekfbq_h264_3800_640x360_360437827814.jpg"  style="width:400px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=38A__WT3-o0">Trailor for this movie</a>
+            {%endif%}
+         </div>
+
+         <div>
+            {% if data[0]=="2008" %}
+               <p>
+                   <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMmUxZWJkNzgtMTJhMS00MGZiLWFkZTEtYTQwY2FlMWU5NjBkXkEyXkFqcGdeQXVyNjkxMjM5Nzc@._V1_.jpg"  style="width:400px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=AIzbwV7on6Q">Trailor for this movie</a>
+            {%endif%}
+         </div>
+ 
+	 <div>
+            {% if data[0]=="2009" %}
+               <p>
+                   <img src="http://cdn.empireonline.com/jpg/80/0/0/1000/563/0/north/0/0/0/0/0/t/films/12162/images/3iPnZOXR9mpcK8RwvAW7b7Axr8v.jpg"  style="width:400px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=AIbFvqFYRT4">Trailor for this movie</a>
+            {%endif%}
+         </div>
+ 	
+ 	 <div>
+            {% if data[0]=="2010" %}
+               <p>
+                   <img src="http://film-english.com/wp-content/uploads/2011/02/the-kings-speech-poster.jpg"  style="width:400px;height:280px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=kYoSQkfrjfA">Trailor for this movie</a>
+            {%endif%}
+         </div>
+
+  	 <div>
+            {% if data[0]=="2011" %}
+               <p>
+                   <img src="http://dl9fvu4r30qs1.cloudfront.net/97/4183b0121211e18472123138165f92/file/TheArtist03.jpg"  style="width:400px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=YB9Oq0hn5KY">Trailor for this movie</a>
+            {%endif%}
+         </div>
+ 
+  	 <div>
+            {% if data[0]=="2012" %}
+               <p>
+                   <img src="https://saminaik.files.wordpress.com/2014/03/argo-pic-1.jpeg"  style="width:380px;height:228px;"><br>
+               </p>
+                   <a href="https://www.youtube.com/watch?v=JW3WfSFgrVY">Trailor for this movie</a>
+            {%endif%}
+         </div>
+
+    <p><a href="/">Back to home page</a></p>
+  </body>
+</html>

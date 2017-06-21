@@ -1,0 +1,62 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  <script type = "text/javascript">
+    function input(name){
+       document.getElementById("result").value=name;}
+    
+    function country_input(id){
+       document.getElementById("id_result").value=id;}
+    
+  </script>
+
+  <body background = 'https://previews.123rf.com/images/sdmix/sdmix0901/sdmix0901
+00059/4225091-vector-oscar-statuette-background-eps8-Stock-Vector-hollywood-award
+s-movie.jpg'>
+      <h1>Audience table</h1>
+
+      <form method="POST" action="/do_become_audience">
+          Please enter your ssn:<br>
+          <input type="text"  name = "ssn"> <br><br>
+
+          Your gender:<br>
+          <input type="button" value="Male"  onclick="input(this.value)">
+          <input type="button" value="Female"  onclick="input(this.value)">
+          <input type="button" value="Refuse to answer"  onclick="input(this.value)">
+	  <input type="button" value="Unidentified"  onclick="input(this.value)">
+          <input type="text"  name = "gender" id="result"> <br><br>
+
+          Your first name:<br>
+          <input type="text"  name = "name"> <br><br>
+
+          Your Country:<br>
+          <input type="button" value="Canada"  onclick="country_input(this.value)">
+          <input type="button" value="America "  onclick="country_input(this.value)">
+          <input type="button" value="China"  onclick="country_input(this.value)">
+          <input type="button" value="Japan"  onclick="country_input(this.value)">
+          <input type="button" value="Germany"  onclick="country_input(this.value)">
+          <input type="button" value="United Kingdom"  onclick="country_input(this.value)">
+          <input type="button" value="France"  onclick="country_input(this.value)">
+          <input type="button" value="India"  onclick="country_input(this.value)">
+          <input type="button" value="Brazil"  onclick="country_input(this.value)">
+          <input type="button" value="Italy"  onclick="country_input(this.value)">
+          <input type="button" value="Taiwan"  onclick="country_input(this.value)">
+          <input type="text"  name = "country" id="id_result"> <br><br>
+
+          <input type="submit" value="Enter" style="width:100px; height:50px;">
+
+    </form>
+
+         </div>
+            {% for n in data %}
+               ssn : {{n[0]}} with gender : {{n[1]}} and name : {{n[2]}}  <br/>
+             
+            {%endfor%}
+         </div>
+
+
+    <p><a href="/">Back to home page</a></p>
+  </body>
+</html>
+

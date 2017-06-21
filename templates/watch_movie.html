@@ -1,0 +1,39 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  <script type = "text/javascript">
+    function input(name){
+       document.getElementById("result").value=name;}
+  </script>
+
+  <body background = 'https://previews.123rf.com/images/sdmix/sdmix0901/sdmix090100059/4225091-vector-oscar-statuette-background-eps8-Stock-Vector-hollywood-awards-movie.jpg'>
+      <h1>Let's see who watched these Oscar winning movies before</h1>
+
+    <form method="POST" action="/do_watch_movie">
+          Please select a movie:<br>
+          <input type="button" value="Argo"  onclick="input(this.value)"> 
+	  <input type="button" value="The Artist"  onclick="input(this.value)">
+	  <input type="button" value="The Kings Speech"  onclick="input(this.value)">
+	  <input type="button" value="The Hurt Locker"  onclick="input(this.value)">
+	  <input type="button" value="Slumdog Millionaire "  onclick="input(this.value)">
+	  <input type="button" value="No Country for Old Men"  onclick="input(this.value)">
+	  <input type="button" value="The Departed"  onclick="input(this.value)">          
+	  <input type="button" value="Crash"  onclick="input(this.value)">
+	  <input type="button" value="Million Dollar Baby"  onclick="input(this.value)">
+	  <input type="button" value="The Lord of the Rings: The Return of the King"  onclick="input(this.value)"> <br><br>
+          <input type="text"  name = "movie" id="result"> <br><br>
+	  <input type="submit" value="Enter" style="width:100px; height:50px;">
+    </form>
+
+         </div>
+            {% for n in data %} 
+	       <div>Audience name : {{n[0]}}  ,  his/her ssn : {{n[1]}}  ,  watched this movie at {{n[2]}}  <div>
+
+	    {%endfor%}
+         </div>	
+
+
+    <p><a href="/">Back to home page</a></p>
+  </body>
+</html>

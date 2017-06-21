@@ -1,0 +1,102 @@
+<html>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  <script type = "text/javascript">
+    function input(name){
+       document.getElementById("result").value=name;}
+  </script>
+
+  <body background = 'https://previews.123rf.com/images/sdmix/sdmix0901/sdmix0901
+00059/4225091-vector-oscar-statuette-background-eps8-Stock-Vector-hollywood-award
+s-movie.jpg'>
+      <h1>Comany's total revenue earned from Oscar movies in these ten years</h1>
+
+
+      <form method="POST" action="/do_company_revenue">
+          Please choose a company:<br>
+          <input type="button" value="Warner Bros"  onclick="input(this.value)">
+          <input type="button" value="Walt Disney Studios "  onclick="input(this.value)">
+          <input type="button" value="Fox Entertainment Group"  onclick="input(this.value)">
+          <input type="button" value="Universal Pictures"  onclick="input(this.value)">
+          <input type="button" value="Sony Pictures"  onclick="input(this.value)">
+          <input type="button" value="Paramount Pictures"  onclick="input(this.value)">
+          <input type="button" value="New Line Cinema"  onclick="input(this.value)">
+          <input type="button" value="Columbia"  onclick="input(this.value)">
+          <input type="button" value="MGM"  onclick="input(this.value)">
+          <input type="button" value="TriStar"  onclick="input(this.value)"> <br><br>
+          <input type="text"  name = "company" id="result"> <br><br>
+          <input type="submit" value="Enter" style="width:100px; height:50px;">
+    </form>
+         
+         </div>
+            {% for n in data %}
+               <div>{{n}}</div>
+            {%endfor%}
+         </div>
+         
+         <div>
+               {%if data[0]=="Warner Bros"%}
+                    <img src="https://pmcdeadline2.files.wordpress.com/2016/07/warner-bros-logo.jpg?w=605" style="width:304px;height:228px;">
+               {%endif%}
+         </div>
+
+         <div>
+               {%if data[0]=="Walt Disney Studios "%}
+                    <img src="http://vignette2.wikia.nocookie.net/disney/images/f/fc/2000px-Walt_Disney_Studios_Home_Entertainment_logo.png/revision/latest?cb=20121014195610" style="width:400px;height:228px;">
+               {%endif%}
+         </div>
+
+	 <div>
+               {%if data[0]=="Fox Entertainment Group"%}
+                    <img src="http://www.teaconnect.org/images/7897_880768_logo.jpg" style="width:304px;height:228px;">
+               {%endif%}
+         </div>
+
+	 <div>
+               {%if data[0]=="Universal Pictures"%}
+                    <img src="https://media1.britannica.com/eb-media/77/103077-004-C101C7F2.jpg" style="width:394px;height:228px;">
+               {%endif%}
+         </div>
+
+	 <div>
+               {%if data[0]=="Sony Pictures"%}
+                    <img src="http://flash.sonypictures.com/shared/global/images/sonypictures_share_200x200.jpg" style="width:304px;height:228px;">
+               {%endif%}
+         </div>
+
+	 <div>
+               {%if data[0]=="Paramount Pictures"%}
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/94/Paramount_Pictures_logo_%282002%29.jpg" style="width:404px;height:228px;">
+               {%endif%}
+         </div>
+
+	 <div>
+               {%if data[0]=="New Line Cinema"%}
+                    <img src="https://pbs.twimg.com/profile_images/690600166735253504/gythAdQU.jpg" style="width:304px;height:228px;">
+               {%endif%}
+         </div>
+
+	 <div>
+               {%if data[0]=="Columbia"%}
+                    <img src="https://s-media-cache-ak0.pinimg.com/originals/b3/2a/04/b32a0484b18cc65855bfd81883c5848f.jpg" style="width:404px;height:228px;">
+               {%endif%}
+         </div>
+ 	
+ 	 <div>
+               {%if data[0]=="MGM"%}
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Mgmlogo_new.jpg" style="width:354px;height:228px;">
+               {%endif%}
+         </div>
+
+         <div>
+               {%if data[0]=="TriStar"%}
+                    <img src="https://vignette2.wikia.nocookie.net/logopedia/images/c/cc/TriStar_Television_1995.png/revision/latest?cb=20141009230608" style="width:304px;height:228px;">
+               {%endif%}
+         </div>  
+      
+
+    <p><a href="/">Back to home page</a></p>
+  </body>
+</html>
