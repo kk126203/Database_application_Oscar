@@ -141,7 +141,7 @@ def do_become_audience():
     gender_index = 0
   elif gender == 'Female':
     gender_index = 1
-  elif gender =='Refuse to ansert' : 
+  elif gender =='Refuse to answer' : 
     gender_index = 2  
   elif gender =='Unidentified': 
     gneder_index = 3
@@ -272,6 +272,8 @@ def do_country_award():
   a = []
   for i in cursor :
     a.append(i)
+  command = 'select gdp, population from '+"'"+str(country)+"'"
+  
   context = dict(data = a)
   return render_template("country_award.html", **context)
 
